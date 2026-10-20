@@ -985,26 +985,26 @@ pause_for_user() {
 }
 
 # ====================================================================
-# MENU 11: INSTALL KEAMANAN (protection.sh)
+# MENU 11: INSTALL CLOUD SERVER PRO (loading animation + protect + admin menu)
 # ====================================================================
 install_security() {
   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-  if [ -f "$SCRIPT_DIR/protection.sh" ]; then
-    sudo bash "$SCRIPT_DIR/protection.sh"
+  if [ -f "$SCRIPT_DIR/cloud-server-pro.sh" ]; then
+    sudo bash "$SCRIPT_DIR/cloud-server-pro.sh"
   else
-    bash <(curl -s https://raw.githubusercontent.com/marwan585/Gaiii/master/protection.sh)
+    bash <(curl -s https://raw.githubusercontent.com/marwan585/Gaiii/master/cloud-server-pro.sh)
   fi
 }
 
 # ====================================================================
-# MENU 12: UNINSTALL KEAMANAN
+# MENU 12: UNINSTALL CLOUD SERVER PRO
 # ====================================================================
 uninstall_security() {
   SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-  if [ -f "$SCRIPT_DIR/protection.sh" ]; then
-    sudo bash "$SCRIPT_DIR/protection.sh" --uninstall
+  if [ -f "$SCRIPT_DIR/cloud-server-pro.sh" ]; then
+    sudo bash "$SCRIPT_DIR/cloud-server-pro.sh" --uninstall
   else
-    bash <(curl -s https://raw.githubusercontent.com/marwan585/Gaiii/master/protection.sh) --uninstall
+    bash <(curl -s https://raw.githubusercontent.com/marwan585/Gaiii/master/cloud-server-pro.sh) --uninstall
   fi
 }
 
@@ -1329,11 +1329,11 @@ while true; do
   echo -e "${CYAN} 8${NC}. Ubah Pw VPS          ${DIM}(ganti password root)${NC}"
   echo -e "${RED} 9${NC}. ${RED}Uninstall Cloud${NC}      ${DIM}${YELLOW}[NEW]${NC} ${DIM}hapus SEMUA pterodactyl otomatis${NC}"
   echo -e "${MAGENTA}10${NC}. ${MAGENTA}Cara Penggunaan${NC}    ${DIM}${YELLOW}[NEW]${NC} ${DIM}tutorial dari nol + opsi${NC}"
-  echo -e "${RED}11${NC}. ${RED}Install Keamanan${NC}    ${DIM}${YELLOW}[NEW]${NC} ${DIM}disk-limit + suspicious + admin-1 only${NC}"
-  echo -e "${RED}12${NC}. ${RED}Uninstall Keamanan${NC} ${DIM}${YELLOW}[NEW]${NC} ${DIM}hapus semua paket keamanan${NC}"
+  echo -e "${RED}11${NC}. ${RED}Cloud Server PRO${NC}     ${DIM}${YELLOW}[NEW v3]${NC} ${DIM}animasi 5s + protect + menu admin-1${NC}"
+  echo -e "${RED}12${NC}. ${RED}Uninstall CS Pro${NC}   ${DIM}${YELLOW}[NEW v3]${NC} ${DIM}hapus semua (animasi+protect+menu)${NC}"
   echo -e "${MAGENTA}13${NC}. ${MAGENTA}AUTO INSTALL FULL${NC}   ${DIM}${YELLOW}[NEW v2.2]${NC} ${DIM}Panel+Wings+Node+Stellar+Security 1 klik${NC}"
-  echo -e "${CYAN}14${NC}. ${CYAN}Install Loading Anim${NC}  ${DIM}${YELLOW}[NEW v2.3]${NC} ${DIM}pasang animasi Cloud Server ke panel${NC}"
-  echo -e "${CYAN}15${NC}. ${CYAN}Uninstall Loading${NC}    ${DIM}${YELLOW}[NEW v2.3]${NC} ${DIM}hapus animasi dari panel${NC}"
+  echo -e "${CYAN}14${NC}. ${CYAN}Install Loading Anim${NC}  ${DIM}${YELLOW}[v2.3]${NC} ${DIM}pasang animasi Cloud Server ke panel${NC}"
+  echo -e "${CYAN}15${NC}. ${CYAN}Uninstall Loading${NC}    ${DIM}${YELLOW}[v2.3]${NC} ${DIM}hapus animasi dari panel${NC}"
   echo -e "${CYAN} x${NC}. Exit"
   echo -e ""
   echo -e "${YELLOW}Masukkan pilihan (1-15/x):${NC} "
